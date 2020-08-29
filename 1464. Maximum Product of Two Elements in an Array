@@ -1,0 +1,7 @@
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        listN = []
+        listN = sorted(nums)
+        i = len(listN)
+        maxP = (listN[i - 1] - 1) * (listN[i - 2] - 1)
+        return maxP
