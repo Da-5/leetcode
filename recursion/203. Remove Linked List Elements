@@ -1,3 +1,11 @@
-kgvkjhb
-
+Class Solution:
+  def removeElements(self, heads: ListNode, val: int) -> ListNode:
+    #base case 递归终止条件
+    if not head: return head
+    #递归的步骤
+    head.next = self.removeElements(head.next, val)
+    if head.val == val:
+      return head.next
+    else:
+      return head
 
